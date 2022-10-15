@@ -1,0 +1,10 @@
+insert into Customer values (1,'3/724 Vikas Nagar Lucknow','Rahul');
+insert into Customer values (2,'5/123 Jankupuram Lucknow','Sunny');
+insert into Customer values (3,'7/825 Khurram Nagar Lucknow','Suraj');
+insert into Customer values (4,'1/584 Kalyanpur Lucknow','Payal');
+insert into Customer values (5,'6/357 Gomti Nagar Lucknow','Shruti');
+insert into Customer values (6,'A/3/25 Indira Nagar Lucknow','Sheetal');
+insert into Customer values (7,'','Sudhansu');
+insert into Customer values (8,'','Deepak');
+insert into Customer values (9,'1/258 Vikas Nagar Lucknow','Akansha');
+insert into Customer values (10,'4/745 Vikas Nagar Lucknow','Anukriti');

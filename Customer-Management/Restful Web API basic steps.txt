@@ -1,0 +1,78 @@
+Various Packages - 
+1. base Package
+   1.1 - SpringMainApplication.java - (for Run / for Command Line Running Testing Purposes)
+2. com.project.name.config - ( Configuration of added on systems and other purposes )
+   2.1 - SwaggerConfig.java - ( Configuration of Swagger ui to utilise for Json output and workings ) - if not included can work on PostMan
+3. com.project.name.controller ( Contain all controler for mapping URLs to their resources )
+   3.1 - Create Record Service Controller
+   3.2 - Count Record Service Controller 
+   3.3 - Read Record Service Controller
+   3.4 - Update Record Service Controller
+   3.5 - Delete Record Service Controller 
+   3.6 - Check Existing Record Service Controller
+4 com.project.name.entity/model ( Contain the Entity classes mapped with tables in DB )
+   4.1 - Entity
+5 com.project.name.repository
+   5.1 - RecordRepository - ( implements - JPA repository with Entity class and Wrapper class of Id )
+6 com.project.name.service - ( interface declaring the methods to be implemented )
+   6.1 - Create Record Service
+	 6.1.1 - String addSingleRecord(Entity var);
+	 6.1.2 - String addMultipleRecords(List<Entity> var);
+	 6.1.3 - Customer addSingleRecordwithSaveandFlush(Entity var);
+   6.2 - Count Record Service 
+         6.2.1 - long countRecords()
+         6.2.2 - long countRecordswithPassedParameter(String var) 
+   6.3 - Read Record Service 
+	 6.3.1 - List<Entity> getAllRecords();
+	 6.3.2 - List<Entity> getAllRecordswithNoAddress();
+	 6.3.3 - Page<Entity> getRecordsPaged();
+	 6.3.4 - Page<Entity> getRecordsCustomPaged(int pageNo, int noOfRecords);
+	 6.3.5 - List<Entity> getRecordsLatestAddedOrder();
+	 6.3.6 - List<Entity> getRecordsCustomSortedById(Direction direction);
+	 6.3.7 - List<Entity> getRecordsCustomSortedByName(Direction direction);
+	 6.3.8 - Page<Entity> getRecordsSortedPageswithPassedAddressParam(String address);
+	 6.3.9 - Page<Entity> getRecordsCustomPagedSortedbyNamePassedAddressParam(int pageNo, int NoOfRecords, String address);
+	6.3.10 - List<Entity> getRecordsSortedbyNamePassedAddressParam(String address);
+	6.3.11 - List<Entity> getRecordsbyIds(List<Integer> ids);
+        6.3.12 - Optional<Entity> getRecordbyId(int id);
+        6.3.13 - Optional<Entity> getRecordwithPassesParam(String address);
+   6.4 - Update Record Service 
+
+   6.5 - Delete Record Service  
+         6.5.1 - String deleteSingleRecord(Customer customer);
+	 6.5.2 - String deleteAllRecords();
+	 6.5.3 - String deleteMultipleRecords(List<Customer> customer);
+   6.6 - Check Existing Record  
+         6.6.1 - boolean checkExistingRecordbyId(int id)
+         6.6.2 - boolean checkExistingRecordbyPassedParameter(String var)
+7 com.project.name.serviceImplementation - ( implementation of all the interfaces )
+   7.1 - Create Record Service implementation
+	 7.1.1 - String addSingleRecord(Entity var);
+	 7.1.2 - String addMultipleRecords(List<Entity> var);
+	 7.1.3 - Customer addSingleRecordwithSaveandFlush(Entity var);
+   7.2 - Count Record Service implementation
+         7.2.1 - long countRecords()
+         7.2.2 - long countRecordswithPassedParameter(String var) 
+   7.3 - Read Record Service implementation
+	 7.3.1 - List<Entity> getAllRecords();
+	 7.3.2 - List<Entity> getAllRecordswithNoAddress();
+	 7.3.3 - Page<Entity> getRecordsPaged();
+	 7.3.4 - Page<Entity> getRecordsCustomPaged(int pageNo, int noOfRecords);
+	 7.3.5 - List<Entity> getRecordsLatestAddedOrder();
+	 7.3.6 - List<Entity> getRecordsCustomSortedById(Direction direction);
+	 7.3.7 - List<Entity> getRecordsCustomSortedByName(Direction direction);
+	 7.3.8 - Page<Entity> getRecordsSortedPageswithPassedAddressParam(String address);
+	 7.3.9 - Page<Entity> getRecordsCustomPagedSortedbyNamePassedAddressParam(int pageNo, int NoOfRecords, String address);
+	7.3.10 - List<Entity> getRecordsSortedbyNamePassedAddressParam(String address);
+	7.3.11 - List<Entity> getRecordsbyIds(List<Integer> ids);
+        7.3.12 - Optional<Entity> getRecordbyId(int id);
+        7.3.13 - Optional<Entity> getRecordwithPassesParam(String address);
+   7.4 - Update Record Service implementation
+
+   7.5 - Delete Record Service  implementation
+         7.5.1 - String deleteSingleRecord(Customer customer);
+	 7.5.2 - String deleteAllRecords();
+	 7.5.3 - String deleteMultipleRecords(List<Customer> customer);
+   7.6 - Check Existing Record  implementation
+         7.6.1 - boolean checkExistingRecordbyId(int id)
+         7.6.2 - boolean checkExistingRecordbyPassedParameter(String var)
